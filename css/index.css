@@ -1,0 +1,204 @@
+body{
+    overflow-x:hidden;
+    margin:0;
+    padding: 0;
+    background-color: #eeeeee;
+    font-family: Verdana, 'Helvetica Neue', 'Microsoft Yahei', 'Hiragino Sans GB', 
+    'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+html{
+    font-size: 625%;
+    font-size: -moz-calc(100vw / 3.2);//在iphone5的下是1rem = 100px（因为是根据iphone5设计的）
+    font-size: -webkit-calc(100vw / 3.2);
+    font-size: -o-calc(100vw / 3.2);
+    font-size: calc(100vw / 3.2);
+}
+
+a{
+    text-decoration:none;
+    color: #03a9f4;
+}
+
+a:visited{
+    color: #3f51b5;
+}
+
+#header{
+    height:0.48rem;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:#9c27b0;
+    box-shadow: 0 0.01rem 0.06rem rgba(0,0,0,0.618);
+    z-index: 1500;
+    text-align: center;
+    font-size: 0.2rem;
+    line-height: 0.48rem;
+}
+
+#navi-back{
+    position:fixed;
+    width: 0.25rem;
+    top:0.115rem;
+    left: 0.18rem;
+    display: none;
+}
+
+#title{
+    /*position:fixed;*/
+    color: #ffffff;
+    /*left: 1.22rem;*/
+}
+
+#toast{
+    height: 0.36rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
+    background-color: #212121;    
+    font-size: 0.15rem;
+    line-height: 0.36rem;
+    text-align: center;
+    z-index: 1200;
+    box-shadow: 0 0.01rem 0.03rem rgba(0,0,0,0.618);
+}
+
+#toast-msg{
+    color: #ffffff;
+}
+
+#first-page{
+    /*display:none;*/
+}
+
+#second-page{
+    font-size: 0.2rem;
+    padding-top:0.48rem;
+    display:none;
+    width: 100%;
+}
+
+#second-page-img-container {
+    width: 100%;
+    height:2.5rem;
+    overflow: hidden;
+}
+
+#second-page-img-container img{
+    width: 100%;
+}
+
+.page{
+    width: 100%;
+    height: auto;
+    padding: 0.53rem 0 0.05rem 0;
+    z-index: 1000;
+    display:none;
+}
+
+.image-item{
+    position:absolute;
+}
+
+.image-item-big{
+    position: fixed;
+}
+
+.blur {
+    -webkit-filter: blur(5px); 
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);    
+    filter: blur(5px);    
+    /*filter:url(/blur.svg#blur);*/
+}
+
+.category{
+    padding: 0.24rem 0.18rem 0 0;
+}
+
+.category-title{
+    font-size: 0.25rem;
+    color:#424242;
+    margin: 0 0 0 0.18rem;
+}
+
+.category-list{
+    padding: 0 0 0 0.36rem;
+}
+
+.category-list li{
+    font-size: 0.15rem;
+    margin-top: 0.08rem;
+    color:#424242;
+}
+
+
+.img-zoom{
+    animation:img_zoom_key 30s ease 0s infinite alternate;
+    -moz-animation:img_zoom_key 30s ease 0s infinite alternate;
+    -webkit-animation:img_zoom_key 30s ease 0s infinite alternate;
+    -o-animation:img_zoom_key 30s ease 0s infinite alternate;
+}
+
+@keyframes img_zoom_key{
+0%  {
+    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -o-ransform: scale(1,1);
+} 
+100% { 
+        transform: scale(1.5,1.5);
+    -webkit-transform: scale(1.5,1.5);
+    -moz-transform: scale(1.5,1.5);
+    -o-ransform: scale(1.5,1.5);
+}
+}
+
+@-moz-keyframes img_zoom_key{
+0%  {
+    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -o-ransform: scale(1,1);
+} 
+100% { 
+        transform: scale(1.5,1.5);
+    -webkit-transform: scale(1.5,1.5);
+    -moz-transform: scale(1.5,1.5);
+    -o-ransform: scale(1.5,1.5);
+}
+}
+
+@-webkit-keyframes img_zoom_key{
+0%  {
+    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -o-ransform: scale(1,1);
+} 
+100% { 
+        transform: scale(1.5,1.5);
+    -webkit-transform: scale(1.5,1.5);
+    -moz-transform: scale(1.5,1.5);
+    -o-ransform: scale(1.5,1.5);
+}
+}
+
+@-o-keyframes img_zoom_key{
+0%  {
+    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -o-ransform: scale(1,1);
+} 
+100% { 
+        transform: scale(1.5,1.5);
+    -webkit-transform: scale(1.5,1.5);
+    -moz-transform: scale(1.5,1.5);
+    -o-ransform: scale(1.5,1.5);
+}
+}
