@@ -1,5 +1,6 @@
 # GankWebApp
 基于gonk.io提供的Api,多谢[干货集中营](http://gank.io/)的大神们提供的接口！！<br/>
+应用入口： http://sausure.github.io/GankWebApp/<br/>
 
 ###界面欣赏（单页应用）
 #####应用操作：单击进入详情，双击放大图片。
