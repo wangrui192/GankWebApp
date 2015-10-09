@@ -38,12 +38,12 @@ a:visited{
     line-height: 0.48rem;
 }
 
-#navi-back{
+#navi{
     position:fixed;
-    width: 0.25rem;
-    top:0.115rem;
+    width: 0.2rem;
+    top:0.14rem;
     left: 0.18rem;
-    display: none;
+    /*display: none;*/
 }
 
 #title{

@@ -33,7 +33,7 @@ var firstPage = $("#first-page");
 
 var secondPage = $("#second-page");
 
-var naviBack = $("#navi-back");
+var navi = $("#navi");
 
 var centerLoading = $("#center-loading");
 
@@ -165,8 +165,11 @@ function addClickListener(){
         toggleSmallestImg(currentImg,globalImg);
     });
 
-    naviBack.click(function(e){
-        secondToFirstPage();
+    navi.click(function(e){
+        if(!isFirstPage)
+            secondToFirstPage();
+        else
+            window.open("https://github.com/Sausure/GankWebApp");
     });
 }
 
@@ -392,13 +395,21 @@ function secondToFirstPage(){
         secondPage.empty();
     });
 
-    naviBack.fadeOut();
 
     firstPage.fadeIn(ANIMATE_DEFAULT_TIME,function(){
         window.scrollTo(0,firstPageScrollTop);
         $("#title-url").attr("href","http://gank.io/");
         isFirstPage = true;
+        naviToGitHub();
     });
+}
+
+function naviToGitHub(){
+    navi.attr("src","img/github.png");
+}
+
+function naviToFirst(){
+    navi.attr("src","img/navi_back.png");
 }
 
 function firstToSecondPage(){
@@ -411,7 +422,7 @@ function firstToSecondPage(){
         $("#title-url").attr("href","http://gank.io/" + alt);
     });
 
-    naviBack.fadeIn();
+    naviToFirst();
     centerLoading.fadeIn();
     headLoading.fadeIn();
 }
@@ -500,7 +511,7 @@ function appendList(list){
     for(var i = 0;i < list.length;++i){
         var item = list[i];
 
-        html += '<li><a href="'+item.url+'">'+item.desc+'</a>('+item.who+')</li>';
+        html += '<li><a target="_blank" href="'+item.url+'">'+item.desc+'</a>('+item.who+')</li>';
     }
 
     html += '</ul>';
